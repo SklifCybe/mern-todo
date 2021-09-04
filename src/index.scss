@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+  height: 70px;
+  background: #939393;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+
+  .logo {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .enter {
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.errorBlock {
+  padding: 0 10px;
+  width: 220px;
+  height: 100px;
+  background: rgba(236, 38, 38, 0.78);
+  border: 1px solid black;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  color: #fff;
+  overflow-y: auto;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
+
+  .close {
+    align-self: flex-end;
+    cursor: pointer;
+
+    &:hover {
+      color: darken(#fff, 20);
+    }
+
+    &:active {
+      color: darken(#fff, 30);
+    }
+  }
+}
+
+main {
+  .auth {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      text-transform: uppercase;
+      font-size: 23px;
+      margin: 10px;
+    }
+
+    input {
+      margin: 10px 0;
+      height: 50px;
+      width: 237px;
+      padding-left: 10px;
+      border-radius: 5px;
+      border: 1px solid #b6b6b6;
+      font-size: 20px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .buttons {
+      width: 100%;
+      margin-top: 5px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        border: 0;
+        cursor: pointer;
+        background: #1d8de3;
+        color: #fff;
+        font-size: 15px;
+        padding: 10px 25px;
+        border-radius: 5px;
+      }
+
+      .auth-button {
+        &:hover {
+          background: darken(#1d8de3, 5);
+        }
+        &:active {
+          background: darken(#1d8de3, 10);
+        }
+      }
+
+      .help-ref {
+        width: 90px;
+        background: #fff;
+        color: #1d8de3;
+        text-decoration: none;
+        display: block;
+      }
+    }
+  }
+}
